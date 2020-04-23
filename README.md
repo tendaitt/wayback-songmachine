@@ -2,6 +2,8 @@
 
 ## wayback-songmachine
 
+An app to find the most popular songs, artists and albums from the year you were born.
+
 # Available Scripts
 
 In the project directory, you can run:

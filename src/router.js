@@ -39,7 +39,7 @@ router.get('/callback', (req, res) => {
     } else {
         res.clearCookie(STATE_KEY);
         spotifyApi.authorizationCodeGrant(code).then(data => {
-            const { expires_in, access_token, refresh_token} = data.body;
+            const { access_token, refresh_token} = data.body;
 
             // set the access token on the API object to use it in later calls
             spotifyApi.setAccessToken(access_token);

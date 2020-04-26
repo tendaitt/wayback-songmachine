@@ -23,13 +23,13 @@ const generateRandomString = function(length) {
     return text;
 };
 
-router.get('/login', (_, res) => {
+router.get('/api/login', (_, res) => {
     const state = generateRandomString(16);
     res.cookie(STATE_KEY, state);
     res.redirect(spotifyApi.createAuthorizeURL(scopes, state));
 });
 
-router.get('/callback', (req, res) => {
+router.get('/api/callback', (req, res) => {
     const { code, state } = req.query;
     const storedState = req.cookies ? req.cookies[STATE_KEY] : null;
 

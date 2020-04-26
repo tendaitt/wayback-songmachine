@@ -3,6 +3,7 @@ const express = require('express');
 const router = new express.Router();
 
 const CLIENT_ID = '';
+const CLIENT_SECRET = ''
 const REDIRECT_URI = '';
 const STATE_KEY = 'spotify_auth_state';
 
@@ -10,6 +11,7 @@ const scopes = ['playlist-modify-public', 'playlist-modify-private'];
 
 const spotifyApi = new Spotify({
     clientId: CLIENT_ID,
+    clientSecret: CLIENT_SECRET,
     redirectUri: REDIRECT_URI
 })
 

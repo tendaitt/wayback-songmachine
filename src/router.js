@@ -6,6 +6,7 @@ const CLIENT_ID = '';
 const CLIENT_SECRET = ''
 const REDIRECT_URI = '';
 const STATE_KEY = 'spotify_auth_state';
+const CLIENT_REDIRECT_URI = 'http://localhost:3000'
 
 const scopes = ['playlist-modify-public', 'playlist-modify-private'];
 
@@ -37,7 +38,7 @@ router.get('/api/callback', (req, res) => {
 
     // validate state
     if(state === null || state !== storedState) {
-        res.redirect('/#/error/state mismatch');
+        res.redirect(`${CLIENT_REDIRECT_URI}/#/error/state mismatch`);
     } else {
         res.clearCookie(STATE_KEY);
         spotifyApi.authorizationCodeGrant(code).then(data => {
@@ -51,10 +52,9 @@ router.get('/api/callback', (req, res) => {
             spotifyApi.getMe().then(({ body }) => {
                 console.log(body);
             });
-
-            res.redirect(`/#/user/${access_token}/${refresh_token}`);
+            res.redirect(`${CLIENT_REDIRECT_URI}/home/${access_token}/${refresh_token}`);
         }).catch(err => {
-            res.redirect('/#/error/invalid token');
+            res.redirect(`${CLIENT_REDIRECT_URI}/error/invalid token`);
         });
     }
 })

@@ -1,15 +1,17 @@
-[![CircleCI](https://circleci.com/gh/tendaitt/wayback-songmachine.svg?style=svg)](https://circleci.com/gh/tendaitt/wayback-songmachine) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![CircleCI](https://circleci.com/gh/tendaitt/wayback-songmachine.svg?style=svg)](https://circleci.com/gh/tendaitt/wayback-songmachine) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)
 
-## wayback-songmachine
+## The Wayback Song Machine
 
 An app to find the most popular songs, artists and albums from the year you were born.
 
-# Available Scripts
+## Getting Started
+
+### Available Scripts
 
 In the project directory, you can run:
 
 ```
-$ npm start
+$ npm run dev
 ```
 
 Runs the app in the development mode.<br />
@@ -34,3 +36,19 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
+
+## Built With
+
+* [React](https://reactjs.org/)
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) to learn how you can contribute to the project.
+
+## Code of Conduct
+
+Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on the code of conduct.
+
+## License
+
+This project is licensed under the Apache License. More information can be found [here](LICENSE).

@@ -23,13 +23,13 @@ const useStyles = makeStyles((theme) => ({
 
 function App(){
 
-  const classes2 = useStyles();
+  const classes = useStyles();
 
   return (
       <main>
         <AppBar position="static" style={{backgroundColor: '#101317'}}>
           <Toolbar>
-            <Typography variant="h5" className={classes2.title}>The Wayback Song Machine</Typography>
+            <Typography variant="h5" className={classes.title}>The Wayback Song Machine</Typography>
           </Toolbar>
         </AppBar>
 

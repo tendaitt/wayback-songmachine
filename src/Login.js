@@ -96,6 +96,7 @@ export default function Login() {
               style={{
                 width: "100%",
               }}
+              href="api/login"
             >
               <span className={classes.imageButton}>
                 <Typography

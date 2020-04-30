@@ -20,9 +20,6 @@ export default function SearchResult() {
 
         <div className={classes.root}>
             <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    <Paper className={classes.paper}>Search Bar</Paper>
-                </Grid>
                 <Grid item xs={4}>
                     <Paper className={classes.paper}>Albums</Paper>
                 </Grid>

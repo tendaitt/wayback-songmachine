@@ -14,7 +14,7 @@ app.set('port', port);
 app.use(cookieParser())
     .use(bodyParser.json())
     .use(bodyParser.urlencoded({ extended: false }))
-    .use(express.static(path.resolve(__dirname, '../public')))
+    .use(express.static(path.resolve(__dirname, '../client/build')))
     .use(morgan('tiny'))
     .use('/', router);
 

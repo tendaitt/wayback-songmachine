@@ -1,5 +1,6 @@
 const Spotify = require('spotify-web-api-node');
 const express = require('express');
+const path = require('path');
 const router = new express.Router();
 
 const CLIENT_ID = '';
@@ -57,6 +58,10 @@ router.get('/api/callback', (req, res) => {
             res.redirect(`${CLIENT_REDIRECT_URI}/error/invalid token`);
         });
     }
+})
+
+router.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'../client/build/index.html'))
 })
 
 module.exports = router;

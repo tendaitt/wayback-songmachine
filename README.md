@@ -8,34 +8,26 @@ An app to find the most popular songs, artists and albums from the year you were
 
 ### Available Scripts
 
-In the project directory, you can run:
+To start the application locally:
+
+1. Start the server by going to the root directory, `wayback-songmachine/`, and running:
 
 ```
-$ npm run dev
+$ yarn start
 ```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+2. Start the client by going to the `client` directory and running:
 
 ```
-$ npm test
+$ cd client/
+$ yarn start
 ```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```
- $ npm build
- ```
+## Hosting
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The application is currently hosted on Heroku and you can find it [here](https://pacific-beyond-50828.herokuapp.com/).
 
 ## Built With
 

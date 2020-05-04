@@ -3,11 +3,11 @@ const express = require('express');
 const path = require('path');
 const router = new express.Router();
 
-const CLIENT_ID = '';
-const CLIENT_SECRET = ''
-const REDIRECT_URI = '';
+const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID || '';
+const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET || '';
+const REDIRECT_URI = process.env.SPOTIFY_REDIRECT_URI || '';;
 const STATE_KEY = 'spotify_auth_state';
-const CLIENT_REDIRECT_URI = 'http://localhost:3000'
+const CLIENT_REDIRECT_URI = process.env.SPOTIFY_CLIENT_REDIRECT_URI || 'http://localhost:3000';
 
 const scopes = ['playlist-modify-public', 'playlist-modify-private'];
 

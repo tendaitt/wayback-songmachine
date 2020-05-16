@@ -14,12 +14,12 @@ app.set('port', port);
 app.use(cookieParser())
     .use(bodyParser.json())
     .use(bodyParser.urlencoded({ extended: false }))
-    .use(express.static(path.resolve(__dirname, '../client/build')))
+    .use(express.static(path.resolve(__dirname, 'client/build')))
     .use(morgan('tiny'))
     .use('/', router);
 
 app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '..client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 app.listen(app.get('port'), () => {

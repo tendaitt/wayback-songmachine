@@ -18,6 +18,10 @@ app.use(cookieParser())
     .use(morgan('tiny'))
     .use('/', router);
 
+app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, '..client/build', 'index.html'));
+});
+
 app.listen(app.get('port'), () => {
     console.log('Express server listening on port ' + app.get('port'));
 });
